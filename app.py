@@ -1,18 +1,16 @@
 import streamlit as st
 import pickle
 import nltk
-nltk.download('punkt')
-nltk.download('punkt_tab')
-nltk.download('stopwords') 
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 import string
 ps = PorterStemmer()
 model = pickle.load(open('model.pkl', 'rb'))
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
-
-st.title('sms spam detection')
-input_sms = st.text_area('Enter the message')
+st.header(":blue[sms spam detector]", divider=True)
+st.image('spam.png', width = 500)
+st.caption('Check whether a message is spam or not.')
+input_sms = st.text_area(':blue-badge[Enter the message]')
 
 def text_transform(text):
     text = text.lower()
@@ -35,7 +33,7 @@ def text_transform(text):
     for i in text:
         y.append(ps.stem(i))
     return " ".join(y)
-if st.button('predict'):
+if st.button('predict',type = 'primary'):
     transformed_sms = text_transform(input_sms)
 
     vectorized_sms = tfidf.transform([transformed_sms])
