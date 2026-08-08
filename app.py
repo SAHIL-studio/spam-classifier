@@ -12,7 +12,7 @@ ps = PorterStemmer()
 model = pickle.load(open('model.pkl', 'rb'))
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 st.header(":blue[sms spam detector]", divider=True)
-st.image('spam.png', width = 500)
+# st.image('spam.png', width = 500)
 st.caption('Check whether a message is spam or not.')
 input_sms = st.text_area(':blue-badge[Enter the message]')
 
