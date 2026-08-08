@@ -4,13 +4,15 @@ A machine learning web application that classifies messages as **Spam** or **Not
 
 ## 🚀 Live Demo
 
-👉 [Try the Spam Detection App]((https://sahil-studio-spam-classifier-app-zvmze8.streamlit.app/))
+👉 [**Try the Spam Detection App**](https://sahil-studio-spam-classifier-app-zvmze8.streamlit.app/)
 
 ## 📌 Project Overview
 
-This project uses NLP and machine learning techniques to detect whether a given SMS/message is spam.
+This project uses Natural Language Processing and machine learning techniques to classify text messages as spam or not spam.
 
-The text is converted into numerical features using **TF-IDF**, and a trained machine learning model is used to make the prediction.
+The text is preprocessed and converted into numerical features using **TF-IDF**, which are then passed to a trained machine learning model to make the prediction.
+
+The trained model and vectorizer are saved using Pickle and integrated into a **Streamlit** web application.
 
 ## 🛠️ Technologies Used
 
@@ -24,23 +26,21 @@ The text is converted into numerical features using **TF-IDF**, and a trained ma
 
 ## ⚙️ Workflow
 
-1. Load and preprocess the text data
-2. Clean and tokenize the messages
-3. Convert text into numerical features using TF-IDF
-4. Train a machine learning classification model
-5. Save the trained model and vectorizer
-6. Build a Streamlit web application
-7. Deploy the application
-
-## 📊 Model
-
-- **Feature Extraction:** TF-IDF
-- **Task:** Binary Text Classification
-- **Classes:** Spam / Not Spam
+1. Load the SMS dataset
+2. Clean and preprocess the text
+3. Tokenize the messages
+4. Remove unnecessary words and characters
+5. Convert text into numerical features using TF-IDF
+6. Train a machine learning classification model
+7. Save the trained model and vectorizer
+8. Build the Streamlit application
+9. Deploy the application using Streamlit Community Cloud
 
 ## 📂 Project Structure
 
 ```text
+Spam-Detection/
+│
 ├── app.py
 ├── model.pkl
 ├── vectorizer.pkl
