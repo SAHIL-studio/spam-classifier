@@ -4,7 +4,7 @@ A machine learning web application that classifies messages as **Spam** or **Not
 
 ## 🚀 Live Demo
 
-👉 [Try the Spam Detection App](https://sahil-studio-spam-classifier-app-zvmze8.streamlit.app/)
+👉 [Try the Spam Detection App]([https://sahil-studio-spam-classifier-app-zvmze8.streamlit.app/](https://sahil-studio-spam-classifier-app-zvmze8.streamlit.app/))
 
 ## 📌 Project Overview
 
